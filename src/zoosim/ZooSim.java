@@ -15,6 +15,39 @@ public class ZooSim {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        // Create a zoo
+        Zoo zoo = new Zoo();
+
+        // Sample images for animals (assuming you have an Image constructor)
+        Image lionImage = new Image(100, 200);
+        Image eagleImage = new Image(50, 100);
+        Image fishImage = new Image(30, 60);
+
+        // Create some animals
+        LandAnim lion = new LandAnim("Leo", "Lion", 'M', 5, 2, 3, lionImage, "Roar");
+        BirdAnim eagle = new BirdAnim("Eddie", "Eagle", 'F', 4, 1, 5, eagleImage, "Screech", true);
+        WaterAnim fish = new WaterAnim("Nemo", "Fish", 'M', 1, 1, 2, fishImage, "Blub", true);
+
+        // Add animals to the zoo
+        zoo.addAnimal(lion);
+        zoo.addAnimal(eagle);
+        zoo.addAnimal(fish);
+
+        // Display Zoo Statistics
+        zoo.displayZooStatistics();
+
+
+        fish.swim();
+        
+        lion.makeSound(); 
+        zoo.feedAllHungryAnimals();
+
+        eagle.fly(); 
+        eagle.eat();
+        zoo.makeAllTiredAnimalsSleep();
+
+        // Move all animals
+        zoo.moveAllAnimals();
     }
     
 }

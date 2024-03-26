@@ -56,6 +56,8 @@ public class ZooSim {
         zoo.moveAllAnimals();
         lion.turn(90);
         zoo.moveAllAnimals();
+        zoo.moveAllAnimals();
+
     }
     
 }

@@ -50,12 +50,12 @@ public class Animal {
     }
 
     public void eat() {
-        hunger -= 10; 
+        hunger = 0; 
         System.out.println(name + " eats and feels less hungry.");
     }
 
     public void sleep() {
-        fatigue -= 10; 
+        fatigue = 0; 
         System.out.println(name + " sleeps and feels less tired.");
     }
 
@@ -74,7 +74,13 @@ public class Animal {
     public int getHunger(){
         return this.hunger;
     }
+    public void printHunger(){
+        System.out.println(this.name + "'s hunger is " + this.hunger);
+    }
     public int getFatigue(){
         return this.fatigue;
+    }
+    public void printFatigue(){
+        System.out.println(this.name + "'s fatigue is " + this.fatigue);
     }
 }

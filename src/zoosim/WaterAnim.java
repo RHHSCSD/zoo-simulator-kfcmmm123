@@ -10,6 +10,7 @@ package zoosim;
  */
 public class WaterAnim extends Animal implements ISwimmable {
     private boolean canBreathe;
+    private boolean canSurface;
 
     public WaterAnim(String name, String species, char sex, int age, int size, int speed, Image image, String sound, boolean canBreathe) {
         super(name, species, sex, age, size, speed, image, sound);
@@ -20,6 +21,8 @@ public class WaterAnim extends Animal implements ISwimmable {
         // Implementation of swim method
         if (canBreathe) {
             System.out.println(name + " is swimming.");
+            this.hunger+= 4;
+            this.fatigue+= 4;
         } else {
             System.out.println(name + " cannot swim.");
         }
@@ -27,6 +30,6 @@ public class WaterAnim extends Animal implements ISwimmable {
 
     @Override
     public boolean canSurface() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return canSurface;
     }
 }

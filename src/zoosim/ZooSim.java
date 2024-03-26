@@ -36,17 +36,25 @@ public class ZooSim {
         // Display Zoo Statistics
         zoo.displayZooStatistics();
 
-
         fish.swim();
+        fish.printHunger();
         
         lion.makeSound(); 
         zoo.feedAllHungryAnimals();
+        fish.printHunger();
 
         eagle.fly(); 
+        eagle.printHunger();
         eagle.eat();
+        eagle.printHunger();
+        
+        eagle.printFatigue();
         zoo.makeAllTiredAnimalsSleep();
+        eagle.printFatigue();
 
         // Move all animals
+        zoo.moveAllAnimals();
+        lion.turn(90);
         zoo.moveAllAnimals();
     }
     

@@ -10,6 +10,7 @@ package zoosim;
  */
 public class BirdAnim extends Animal implements IFlyable {
     private boolean canFly;
+    private boolean isFlying;
 
     public BirdAnim(String name, String species, char sex, int age, int size, int speed, Image image, String sound, boolean canFly) {
         super(name, species, sex, age, size, speed, image, sound);
@@ -19,23 +20,32 @@ public class BirdAnim extends Animal implements IFlyable {
     @Override
     public void fly() {
         // Implementation of fly method
-        if (canFly) {
+        if (canFly && !isFlying) {
             System.out.println(name + " is flying.");
-            this.hunger -=1;
-            this.fatigue -=1;
-        } else {
+            this.hunger += 3;
+            this.fatigue += 3;
+        } else if (canFly && isFlying){
+            System.out.println(name + " is already flying.");
+        }else {
             System.out.println(name + " cannot fly.");
-        }
+        }    
     }
 
     @Override
     public void land() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (canFly && isFlying) {
+            System.out.println(name + " has landed.");
+        } else if (canFly && !isFlying){
+            System.out.println(name + " is not flying.");
+        }
+        else {
+            System.out.println(name + "cannot fly");
+        }
     }
 
     @Override
     public boolean isFlying() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return isFlying;
     }
     
 

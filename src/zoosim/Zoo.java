@@ -40,7 +40,11 @@ public class Zoo {
     public void displayZooStatistics() {
         System.out.println("Zoo Statistics:");
         System.out.println("Total animals: " + animals.size());
+        for (Animal animal : animals) {
+            System.out.println("Name: " + animal.name + ", Species: " + animal.species);
+        }
     }
+
 
     /**
      *

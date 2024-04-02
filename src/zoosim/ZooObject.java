@@ -13,18 +13,36 @@ public class ZooObject implements IObject{
     private int positionX;
     private int positionY;
     private int size;
+
+    /**
+     *
+     * @param type
+     * @param positionX
+     * @param positionY
+     * @param size
+     */
     public ZooObject(String type, int positionX, int positionY, int size) {
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
         this.size = size;
     }
+
+    /**
+     *
+     * @param degrees
+     */
     @Override
     public void turn(int degrees) {
         // Static objects like food, rock, and tree usually don't turn but implementing method to satisfy interface requirement
         System.out.println("This object (" + type + ") doesn't turn.");
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     @Override
     public void place(int x, int y) {
         this.positionX = x;

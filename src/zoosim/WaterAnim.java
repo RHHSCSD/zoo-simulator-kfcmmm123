@@ -12,11 +12,26 @@ public class WaterAnim extends Animal implements ISwimmable {
     private boolean canBreathe;
     private boolean canSurface;
 
+    /**
+     *
+     * @param name
+     * @param species
+     * @param sex
+     * @param age
+     * @param size
+     * @param speed
+     * @param image
+     * @param sound
+     * @param canBreathe
+     */
     public WaterAnim(String name, String species, char sex, int age, int size, int speed, Image image, String sound, boolean canBreathe) {
         super(name, species, sex, age, size, speed, image, sound);
         this.canBreathe = canBreathe;
     }
 
+    /**
+     *
+     */
     public void swim() {
         // Implementation of swim method
         if (canBreathe) {
@@ -28,6 +43,10 @@ public class WaterAnim extends Animal implements ISwimmable {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean canSurface() {
         return canSurface;

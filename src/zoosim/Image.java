@@ -12,6 +12,11 @@ public class Image {
     private int width;
     private int length;
     
+    /**
+     *
+     * @param width
+     * @param length
+     */
     public Image(int width, int length){
         this.width = width;
         this.length = length;

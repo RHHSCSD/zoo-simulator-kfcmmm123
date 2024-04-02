@@ -15,6 +15,12 @@ public interface IObject {
      * @param degrees
      */
     public void turn(int degrees);
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void place(int x, int y);
     
 }

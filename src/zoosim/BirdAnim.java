@@ -12,11 +12,26 @@ public class BirdAnim extends Animal implements IFlyable {
     private boolean canFly;
     private boolean isFlying;
 
+    /**
+     *
+     * @param name
+     * @param species
+     * @param sex
+     * @param age
+     * @param size
+     * @param speed
+     * @param image
+     * @param sound
+     * @param canFly
+     */
     public BirdAnim(String name, String species, char sex, int age, int size, int speed, Image image, String sound, boolean canFly) {
         super(name, species, sex, age, size, speed, image, sound);
         this.canFly = canFly;
     }
     
+    /**
+     *
+     */
     @Override
     public void fly() {
         // Implementation of fly method
@@ -31,6 +46,9 @@ public class BirdAnim extends Animal implements IFlyable {
         }    
     }
 
+    /**
+     *
+     */
     @Override
     public void land() {
         if (canFly && isFlying) {
@@ -43,6 +61,10 @@ public class BirdAnim extends Animal implements IFlyable {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isFlying() {
         return isFlying;

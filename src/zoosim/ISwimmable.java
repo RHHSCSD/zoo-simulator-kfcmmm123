@@ -9,5 +9,10 @@ package zoosim;
  * @author alan
  */
 public interface ISwimmable {
+
+    /**
+     *
+     * @return
+     */
     public boolean canSurface();
 }

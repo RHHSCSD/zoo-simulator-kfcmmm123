@@ -9,8 +9,24 @@ package zoosim;
  * @author alan
  */
 public interface IEntity {
+
+    /**
+     *
+     */
     public void move();
+
+    /**
+     *
+     */
     public void makeSound();
+
+    /**
+     *
+     */
     public void eat();
+
+    /**
+     *
+     */
     public void sleep();
 }
